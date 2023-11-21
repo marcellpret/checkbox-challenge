@@ -1,0 +1,50 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.checkbox {
+    /* appearance: none; */
+}
+
+#custom-checkbox {
+    cursor: pointer;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.checkbox:checked~#custom-checkbox {
+    background-color: black;
+}
+
+svg polyline {
+    stroke: none;
+}
+
+.checkbox:checked~#custom-checkbox svg polyline {
+    stroke: white;
+}
+
+#outline {
+    position: absolute;
+    inset: -4px
+}
+
+.focus {
+    border: 2px solid blue;
+    border-radius: 5px;
+}
